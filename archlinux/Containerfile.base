@@ -11,7 +11,7 @@ RUN curl https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/
 
 # Perform a clean system installation with latest Arch Linux packages in chroot to correctly execute hooks, this uses host's Pacman
 RUN pacman --noconfirm --sync --needed arch-install-scripts \
- && pacstrap -K -P /mnt base \
+ && pacstrap -K -P /mnt base base-devel nono iwd zsh\
  && cp -av /etc/pacman.d/ /mnt/etc/
 
 # |
